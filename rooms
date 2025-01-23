@@ -1,0 +1,29 @@
+class Roombooking:
+    def __init__(self, root):
+        self.root = root
+        self.root.title('Hotel Management System')
+        self.root.geometry('1295x550+230+220')
+
+        # Variables
+        self.var_contact = StringVar()
+        self.var_checkin = StringVar()
+        self.var_checkout = StringVar()
+        self.var_roomtype = StringVar()
+        self.var_roomavailable = StringVar()
+        self.var_meals = StringVar()
+        self.var_noofdays = StringVar()
+        self.var_paidtax = StringVar()
+        self.var_actualtotal = StringVar()
+        self.var_total = StringVar()
+
+        # Title
+        lbl_title = Label(self.root, text="ROOMBOOKING DETAILS", font=('times new roman', 18, 'bold'), bg='grey', fg='black', bd=4, relief=RIDGE)
+        lbl_title.place(x=0, y=0, width=1295, height=50)
+
+        # Logo
+        img2 = Image.open(r"Images\logo.jpg")
+        img2 = img2.resize((100, 40), Image.ANTIALIAS)
+        self.photoimg2 = ImageTk.PhotoImage(img2)
+
+        lbling = Label(self.root, image=self.photoimg2, bd=0, relief=RIDGE)
+        lbling.place(x=5, y=2, width=100, height=40)
