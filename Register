@@ -1,0 +1,32 @@
+from tkinter import *
+from tkinter import ttk
+from PIL import Image, ImageTk
+import mysql.connector
+
+class Register:
+    def __init__(self, root):
+        self.root = root
+        self.root.title('Register')
+        self.root.geometry("1600x900+0+0")
+
+        self.var_fname = StringVar()
+        self.var_lname = StringVar()
+        self.var_contact = StringVar()
+        self.var_email = StringVar()
+        self.var_securityQ = StringVar()
+        self.var_securityA = StringVar()
+        self.var_pass = StringVar()
+        self.var_confpass = StringVar()
+
+        # Background image
+        self.bg = ImageTk.PhotoImage(file=r"Images\regbg.jpg")
+        bg_lbl = Label(self.root, image=self.bg)
+        bg_lbl.place(x=0, y=0, relwidth=1, relheight=1)
+
+        frame = Frame(self.root, bg='white')
+        frame.place(x=360, y=100, width=800, height=550)
+
+        register_lbl = Label(frame, text="REGISTER HERE", font=("times new roman", 20, "bold"), fg="dark blue", bg="white")
+        register_lbl.place(x=20, y=20)
+
+        # UI elements like labels and entry fields for registration (e.g., first name, last name, contact, email, etc.)
